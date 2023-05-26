@@ -19,6 +19,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="client\.vscode\extensions.json" />
+	  <Content Include="client\.vscode\launch.json" />
+	  <Content Include="client\.vscode\tasks.json" />
+	  <Content Include="client\angular.json" />
+	  <Content Include="client\package-lock.json" />
+	  <Content Include="client\package.json" />
+	  <Content Include="client\src\app\app.component.css" />
+	  <Content Include="client\src\app\app.component.html" />
+	  <Content Include="client\src\app\nav\nav.component.css" />
+	  <Content Include="client\src\app\nav\nav.component.html" />
+	  <Content Include="client\src\favicon.ico" />
+	  <Content Include="client\src\index.html" />
+	  <Content Include="client\src\styles.css" />
+	  <Content Include="client\tsconfig.app.json" />
+	  <Content Include="client\tsconfig.json" />
+	  <Content Include="client\tsconfig.spec.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="client\.editorconfig" />
+		<None Include="client\.gitignore" />
+		<None Include="client\README.md" />
+		<None Include="client\src\assets\.gitkeep" />
+		<None Include="client\ssl\server.crt" />
+		<None Include="client\ssl\server.key" />
 		<None Include="Data\UserSeedData.json" />
 	</ItemGroup>
 
@@ -30,6 +55,10 @@
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.4">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 	</ItemGroup>
 
@@ -40,6 +69,20 @@
 		<ProjectReference Include="..\Repositories\Repositories.csproj" />
 		<ProjectReference Include="..\Services\Services.csproj" />
 		<ProjectReference Include="..\ViewModels\ViewModels.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <TypeScriptCompile Include="client\src\app\app-routing.module.ts" />
+	  <TypeScriptCompile Include="client\src\app\app.component.spec.ts" />
+	  <TypeScriptCompile Include="client\src\app\app.component.ts" />
+	  <TypeScriptCompile Include="client\src\app\app.module.ts" />
+	  <TypeScriptCompile Include="client\src\app\nav\nav.component.ts" />
+	  <TypeScriptCompile Include="client\src\app\_guards\auth.guard.ts" />
+	  <TypeScriptCompile Include="client\src\app\_models\user.ts" />
+	  <TypeScriptCompile Include="client\src\app\_services\account.service.ts" />
+	  <TypeScriptCompile Include="client\src\app\_utilities\APIInterceptor.ts" />
+	  <TypeScriptCompile Include="client\src\app\_utilities\jwt.interceptor.ts" />
+	  <TypeScriptCompile Include="client\src\main.ts" />
 	</ItemGroup>
 
 </Project>
